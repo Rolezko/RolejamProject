@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ProgressBar?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.ToggleButton?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="554.0" prefWidth="940.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Rolejam.BattleSceneController">
+   <children>
+      <VBox alignment="CENTER" prefHeight="547.0" prefWidth="933.0" AnchorPane.bottomAnchor="5.0" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="5.0" AnchorPane.topAnchor="5.0">
+         <children>
+            <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" VBox.vgrow="ALWAYS">
+               <children>
+                  <VBox alignment="BOTTOM_CENTER" prefHeight="200.0" prefWidth="100.0" HBox.hgrow="ALWAYS">
+                     <children>
+                        <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="32.0" prefWidth="181.0" text="  HERO  " textAlignment="CENTER" underline="true" VBox.vgrow="ALWAYS">
+                           <font>
+                              <Font name="System Bold" size="22.0" />
+                           </font>
+                           <VBox.margin>
+                              <Insets bottom="10.0" />
+                           </VBox.margin>
+                        </Label>
+                        <GridPane>
+                          <columnConstraints>
+                            <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                            <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                          </columnConstraints>
+                          <rowConstraints>
+                            <RowConstraints minHeight="10.0" prefHeight="35.0" vgrow="SOMETIMES" />
+                            <RowConstraints minHeight="10.0" prefHeight="50.0" vgrow="SOMETIMES" />
+                            <RowConstraints minHeight="10.0" prefHeight="50.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="50.0" vgrow="SOMETIMES" />
+                          </rowConstraints>
+                           <VBox.margin>
+                              <Insets bottom="30.0" />
+                           </VBox.margin>
+                           <children>
+                              <Label alignment="CENTER" prefHeight="28.0" prefWidth="68.0" style="-fx-border-color: RED;" text="ATTACK" textAlignment="CENTER">
+                                 <font>
+                                    <Font name="System Bold" size="15.0" />
+                                 </font>
+                              </Label>
+                              <Label style="-fx-border-color: BLUE;" text="DEFENCE" GridPane.columnIndex="1">
+                                 <font>
+                                    <Font name="System Bold" size="15.0" />
+                                 </font>
+                              </Label>
+                              <ToggleButton fx:id="hAttackHeadTG" depthTest="DISABLE" focusTraversable="false" maxWidth="60.0" minWidth="60.0" mnemonicParsing="false" onAction="#HeroAttackChooseBs" prefWidth="60.0" text="Head" GridPane.rowIndex="1" />
+                              <ToggleButton fx:id="hAttackBodyTG" depthTest="DISABLE" focusTraversable="false" maxWidth="60.0" minWidth="60.0" mnemonicParsing="false" onAction="#HeroAttackChooseBs" prefWidth="60.0" text="Body" GridPane.rowIndex="2" />
+                              <ToggleButton fx:id="hAttackLegTG" depthTest="DISABLE" focusTraversable="false" maxWidth="60.0" minWidth="60.0" mnemonicParsing="false" onAction="#HeroAttackChooseBs" prefWidth="60.0" text="Leg" GridPane.rowIndex="3" />
+                              <ToggleButton fx:id="hDefenceHeadTG" focusTraversable="false" maxWidth="60.0" minWidth="60.0" mnemonicParsing="false" onAction="#HeroDefenceChooseBs" prefWidth="60.0" text="Head" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                              <ToggleButton fx:id="hDefenceBodyTG" focusTraversable="false" maxWidth="60.0" minWidth="60.0" mnemonicParsing="false" onAction="#HeroDefenceChooseBs" prefWidth="60.0" text="Body" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                              <ToggleButton fx:id="hDefenceLegTG" focusTraversable="false" maxWidth="60.0" minWidth="60.0" mnemonicParsing="false" onAction="#HeroDefenceChooseBs" prefWidth="60.0" text="Leg" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                           </children>
+                        </GridPane>
+                        <Button fx:id="hReadyB" alignment="CENTER" disable="true" focusTraversable="false" mnemonicParsing="false" onAction="#TheHeroIsReady" prefHeight="25.0" prefWidth="92.0" text="Завершить">
+                           <VBox.margin>
+                              <Insets bottom="20.0" />
+                           </VBox.margin>
+                        </Button>
+                        <Separator prefWidth="200.0" />
+                        <GridPane alignment="BOTTOM_CENTER" gridLinesVisible="true" prefHeight="57.0" prefWidth="416.0">
+                          <columnConstraints>
+                            <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" maxWidth="231.0" minWidth="10.0" prefWidth="168.0" />
+                            <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" maxWidth="322.0" minWidth="10.0" prefWidth="160.0" />
+                          </columnConstraints>
+                          <rowConstraints>
+                            <RowConstraints maxHeight="20.0" minHeight="30.0" prefHeight="30.0" valignment="CENTER" vgrow="ALWAYS" />
+                            <RowConstraints maxHeight="20.0" minHeight="30.0" prefHeight="30.0" valignment="CENTER" vgrow="ALWAYS" />
+                            <RowConstraints maxHeight="20.0" minHeight="30.0" prefHeight="30.0" valignment="CENTER" vgrow="ALWAYS" />
+                              <RowConstraints maxHeight="20.0" minHeight="30.0" prefHeight="30.0" valignment="CENTER" vgrow="ALWAYS" />
+                          </rowConstraints>
+                           <children>
+                              <Label text="HP: " />
+                              <Label text="AttackPower: " GridPane.rowIndex="1" />
+                              <Label text="Speed: " GridPane.rowIndex="2" />
+                              <Label fx:id="AttackPowerHeroLabel" alignment="CENTER" contentDisplay="CENTER" prefHeight="17.0" prefWidth="59.0" text="Label" textAlignment="CENTER" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                              <Label fx:id="SpeedHeroLabel" alignment="CENTER" contentDisplay="CENTER" prefHeight="17.0" prefWidth="59.0" text="Label" textAlignment="CENTER" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                              <Label text="Defence: " GridPane.rowIndex="3" />
+                              <Label fx:id="DefenceHeroLabel" alignment="CENTER" contentDisplay="CENTER" prefHeight="17.0" prefWidth="59.0" text="Label" textAlignment="CENTER" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                              <StackPane prefHeight="150.0" prefWidth="200.0" GridPane.columnIndex="1">
+                                 <children>
+                                    <ProgressBar fx:id="HPProgressBarHero" focusTraversable="false" prefHeight="19.0" prefWidth="212.0" progress="0.54" />
+                                    <Label fx:id="HPHeroLabel" alignment="CENTER" contentDisplay="CENTER" prefHeight="17.0" prefWidth="59.0" text="1111111" textAlignment="CENTER" />
+                                 </children>
+                              </StackPane>
+                           </children>
+                        </GridPane>
+                     </children>
+                  </VBox>
+                  <Separator orientation="VERTICAL" prefHeight="200.0" />
+                  <VBox alignment="BOTTOM_CENTER" prefHeight="200.0" prefWidth="100.0" HBox.hgrow="ALWAYS">
+                     <children>
+                        <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="32.0" prefWidth="181.0" text="  ENEMY  " textAlignment="CENTER" underline="true">
+                           <font>
+                              <Font name="System Bold" size="22.0" />
+                           </font>
+                           <VBox.margin>
+                              <Insets bottom="10.0" />
+                           </VBox.margin>
+                        </Label>
+                        <GridPane>
+                           <columnConstraints>
+                              <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                              <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                           </columnConstraints>
+                           <rowConstraints>
+                              <RowConstraints minHeight="10.0" prefHeight="35.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="50.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="50.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="50.0" vgrow="SOMETIMES" />
+                           </rowConstraints>
+                           <children>
+                              <Label alignment="CENTER" prefHeight="28.0" prefWidth="68.0" style="-fx-border-color: RED;" text="ATTACK" textAlignment="CENTER">
+                                 <font>
+                                    <Font name="System Bold" size="15.0" />
+                                 </font>
+                              </Label>
+                              <Label style="-fx-border-color: BLUE;" text="DEFENCE" GridPane.columnIndex="1">
+                                 <font>
+                                    <Font name="System Bold" size="15.0" />
+                                 </font>
+                              </Label>
+                              <ToggleButton fx:id="eAttackHeadTG" cacheShape="false" centerShape="false" depthTest="DISABLE" disable="true" focusTraversable="false" maxWidth="60.0" minWidth="60.0" mnemonicParsing="false" onAction="#HeroAttackChooseBs" prefWidth="60.0" scaleShape="false" text="Head" GridPane.rowIndex="1" />
+                              <ToggleButton fx:id="eAttackBodyTG" cacheShape="false" centerShape="false" depthTest="DISABLE" disable="true" focusTraversable="false" maxWidth="60.0" minWidth="60.0" mnemonicParsing="false" onAction="#HeroAttackChooseBs" prefWidth="60.0" scaleShape="false" text="Body" GridPane.rowIndex="2" />
+                              <ToggleButton fx:id="eAttackLegTG" cacheShape="false" centerShape="false" depthTest="DISABLE" disable="true" focusTraversable="false" maxWidth="60.0" minWidth="60.0" mnemonicParsing="false" onAction="#HeroAttackChooseBs" prefWidth="60.0" scaleShape="false" text="Leg" GridPane.rowIndex="3" />
+                              <ToggleButton fx:id="eDefenceHeadTG" cacheShape="false" centerShape="false" disable="true" focusTraversable="false" maxWidth="60.0" minWidth="60.0" mnemonicParsing="false" onAction="#HeroDefenceChooseBs" prefWidth="60.0" scaleShape="false" text="Head" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                              <ToggleButton fx:id="eDefenceBodyTG" cacheShape="false" centerShape="false" disable="true" focusTraversable="false" maxWidth="60.0" minWidth="60.0" mnemonicParsing="false" onAction="#HeroDefenceChooseBs" prefWidth="60.0" scaleShape="false" text="Body" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                              <ToggleButton fx:id="eDefenceLegTG" cacheShape="false" centerShape="false" disable="true" focusTraversable="false" maxWidth="60.0" minWidth="60.0" mnemonicParsing="false" onAction="#HeroDefenceChooseBs" prefWidth="60.0" scaleShape="false" text="Leg" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                           </children>
+                           <VBox.margin>
+                              <Insets bottom="30.0" />
+                           </VBox.margin>
+                        </GridPane>
+                        <Button fx:id="eReadyB" alignment="CENTER" cacheShape="false" centerShape="false" disable="true" focusTraversable="false" mnemonicParsing="false" prefHeight="25.0" prefWidth="92.0" scaleShape="false" text="Завершить" visible="false">
+                           <VBox.margin>
+                              <Insets bottom="20.0" />
+                           </VBox.margin>
+                        </Button>
+                        <Separator prefWidth="200.0" />
+                        <GridPane alignment="BOTTOM_CENTER" gridLinesVisible="true" prefHeight="19.0" prefWidth="425.0">
+                           <columnConstraints>
+                              <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" maxWidth="248.0" minWidth="10.0" prefWidth="160.0" />
+                              <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" maxWidth="322.0" minWidth="10.0" prefWidth="160.0" />
+                           </columnConstraints>
+                           <rowConstraints>
+                              <RowConstraints maxHeight="30.0" minHeight="30.0" prefHeight="30.0" valignment="CENTER" vgrow="ALWAYS" />
+                              <RowConstraints maxHeight="30.0" minHeight="30.0" prefHeight="30.0" valignment="CENTER" vgrow="ALWAYS" />
+                              <RowConstraints maxHeight="30.0" minHeight="30.0" prefHeight="30.0" valignment="CENTER" vgrow="ALWAYS" />
+                              <RowConstraints maxHeight="30.0" minHeight="30.0" prefHeight="30.0" valignment="CENTER" vgrow="ALWAYS" />
+                           </rowConstraints>
+                           <children>
+                              <Label text="HP: " />
+                              <Label text="AttackPower: " GridPane.rowIndex="1" />
+                              <Label text="Speed: " GridPane.rowIndex="2" />
+                              <Label fx:id="AttackPowerEnemyLabel" alignment="CENTER" contentDisplay="CENTER" prefHeight="17.0" prefWidth="59.0" text="Label" textAlignment="CENTER" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                              <Label fx:id="SpeedEnemyLabel" alignment="CENTER" contentDisplay="CENTER" prefHeight="17.0" prefWidth="59.0" text="Label" textAlignment="CENTER" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                              <Label text="Defence: " GridPane.rowIndex="3" />
+                              <Label fx:id="DefenceEnemyLabel" alignment="CENTER" contentDisplay="CENTER" prefHeight="17.0" prefWidth="59.0" text="Label" textAlignment="CENTER" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                              <StackPane prefHeight="150.0" prefWidth="200.0" GridPane.columnIndex="1">
+                                 <children>
+                                    <ProgressBar fx:id="HPProgressBarEnemy" focusTraversable="false" prefHeight="19.0" prefWidth="212.0" progress="0.54" style="-fx-accent: RED;" />
+                                    <Label fx:id="HPEnemyLabel" alignment="CENTER" contentDisplay="CENTER" prefHeight="17.0" prefWidth="59.0" text="Label" textAlignment="CENTER" />
+                                 </children>
+                              </StackPane>
+                           </children>
+                        </GridPane>
+                     </children>
+                  </VBox>
+               </children>
+            </HBox>
+            <Separator prefWidth="200.0" />
+            <HBox alignment="CENTER" prefHeight="114.0" prefWidth="822.0" VBox.vgrow="SOMETIMES">
+               <children>
+                  <TextArea fx:id="LogsTA" focusTraversable="false" prefHeight="114.0" prefWidth="827.0" wrapText="true" HBox.hgrow="ALWAYS" />
+               </children></HBox>
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>
