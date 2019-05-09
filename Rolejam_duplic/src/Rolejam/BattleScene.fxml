@@ -103,7 +103,7 @@
                   <Separator orientation="VERTICAL" prefHeight="200.0" />
                   <VBox alignment="BOTTOM_CENTER" prefHeight="200.0" prefWidth="100.0" HBox.hgrow="ALWAYS">
                      <children>
-                        <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="32.0" prefWidth="181.0" text="  ENEMY  " textAlignment="CENTER" underline="true">
+                        <Label fx:id="EnemyNameLabel" alignment="CENTER" contentDisplay="CENTER" prefHeight="32.0" prefWidth="400.0" text="  ENEMY  " textAlignment="CENTER" underline="true">
                            <font>
                               <Font name="System Bold" size="22.0" />
                            </font>
